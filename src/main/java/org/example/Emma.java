@@ -1,12 +1,11 @@
 package org.example;
 
-import org.example.interfaces.IObservable;
+import org.example.interfaces.Observable;
 import org.example.interfaces.IObserver;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Emma extends Character implements IObservable {
+public class Emma extends Character implements Observable {
     protected LinkedList<IObserver> observers = new LinkedList<>();
 
     public Emma(String name) {

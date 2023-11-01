@@ -1,6 +1,6 @@
 package org.example.interfaces;
 
-public interface IObservable {
+public interface Observable {
     void addObserver(IObserver observer);
 
     void removeObserver(IObserver observer);
