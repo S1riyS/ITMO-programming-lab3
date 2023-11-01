@@ -22,12 +22,12 @@ public abstract class Character implements Action {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(name) + 42;
     }
 
     @Override
     public String toString() {
-        return String.format("Character {name='%s'}", this.name);
+        return String.format("%s {name='%s'}", getClass().getName(), this.name);
     }
 }
 
