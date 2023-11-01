@@ -1,9 +1,12 @@
 package org.example;
 
+import org.example.interfaces.IObservable;
+import org.example.interfaces.IObserver;
+
 import java.util.ArrayList;
 
-public class Emma extends Character implements Observable {
-    protected ArrayList<Observer> observers = new ArrayList<>();
+public class Emma extends Character implements IObservable {
+    protected ArrayList<IObserver> observers = new ArrayList<>();
 
     public Emma(String name) {
         super(name);
@@ -17,18 +20,18 @@ public class Emma extends Character implements Observable {
     }
 
     @Override
-    public void addObserver(Observer observer) {
+    public void addObserver(IObserver observer) {
         observers.add(observer);
     }
 
     @Override
-    public void removeObserver(Observer observer) {
+    public void removeObserver(IObserver observer) {
         observers.remove(observer);
     }
 
     @Override
     public void notifyObservers() {
-        for (Observer observer : observers) {
+        for (IObserver observer : observers) {
             observer.update(this.name + " уходит в темноту");
         }
     }

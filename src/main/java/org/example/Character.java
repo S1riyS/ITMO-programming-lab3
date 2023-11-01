@@ -1,8 +1,10 @@
 package org.example;
 
+import org.example.interfaces.IAct;
+
 import java.util.Objects;
 
-public abstract class Character implements Action {
+public abstract class Character implements IAct {
     protected String name;
 
     public Character(String name) {

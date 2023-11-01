@@ -1,6 +1,8 @@
 package org.example;
 
-public class MumiTroll extends Character implements Observer {
+import org.example.interfaces.IObserver;
+
+public class MumiTroll extends Character implements IObserver {
     public MumiTroll(String name) {
         super(name);
     }
