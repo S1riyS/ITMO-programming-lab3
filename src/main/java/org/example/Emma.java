@@ -4,9 +4,10 @@ import org.example.interfaces.IObservable;
 import org.example.interfaces.IObserver;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Emma extends Character implements IObservable {
-    protected ArrayList<IObserver> observers = new ArrayList<>();
+    protected LinkedList<IObserver> observers = new LinkedList<>();
 
     public Emma(String name) {
         super(name);
